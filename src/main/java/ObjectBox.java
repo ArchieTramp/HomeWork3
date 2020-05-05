@@ -1,29 +1,42 @@
 import java.util.*;
+import java.util.function.Predicate;
 
 public class ObjectBox {
 
     public static void main(String[] args) {
-        Object[] arr = new String[10];
-        ArrayList object = new ArrayList<Object>(Arrays.asList(arr));
-        System.out.println(Arrays.toString(arr));
+//        Object[] arr = /* {"qwe", "wer", "ert", "tyu"};*/ new String[10];
+        ArrayList<Object> objects = new ArrayList<>(Collections.emptyList());
+//        System.out.println("исходный массив " + Arrays.toString());
 
+        objects.add(addObject());
+        System.out.println(objects);
+        objects.remove(deleteObject());
+        System.out.println(objects);
 
     }
 
-    private static String[] objects;
+//    private static String objects;
+//
+//    public ObjectBox(Object objects) {
+//        this.objects = objects.toString();
+//    }
 
-    public ObjectBox(ArrayList<String> object) {
-        this.objects = object.toArray(new String[0]);
-    }
+        public static Object addObject() {
 
-        public List<String> addObject() {
-            List<String> objects = new ArrayList<>();
             System.out.print("Новый объект ");
             Scanner scan = new Scanner(System.in);
             String x = scan.nextLine();
-            objects.add(x);
-            System.out.println(objects);
-            return objects;
+            return x;
+
+        }
+
+        public static Object deleteObject() {
+            System.out.print("Проверить объект ");
+            Scanner scan = new Scanner(System.in);
+            String y = scan.nextLine();
+            return y;
+
+
 
         }
 
