@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class MathBox {
+public class MathBox extends ObjectBox {
     public static void main(String [] args) {
-
+        try {
         int z;
         System.out.print("Введите размер массива ");
         Scanner scan = new Scanner(System.in);
@@ -24,6 +24,10 @@ public class MathBox {
         new MathBox(numbers).summator();
         new MathBox(numbers).splitter();
         new MathBox(numbers).eraser();
+        new MathBox(numbers).addObject();
+        new MathBox(numbers).deleteObject();} catch (Exception e) {
+            System.out.println(e + " вводить необходимо целочисленные значения");
+        }
 
 
     }
