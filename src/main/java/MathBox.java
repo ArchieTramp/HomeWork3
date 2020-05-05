@@ -24,7 +24,7 @@ public class MathBox extends ObjectBox {
             System.out.print("Введите значение для элемента " + z + " - ");
             numarray[z] = scanarr.nextInt();
             }
-            /** сортировка исключительно для красоты отображения, которая все равно не будет слиять на Set */
+            /** сортировка исключительно для красоты отображения, которая все равно не будет влиять на Set */
         Arrays.sort(numarray);
         /** массив в сет только ради удаления повторов, ибо быстро */
         Set<Integer> numset = new HashSet<>(Arrays.asList(numarray));
