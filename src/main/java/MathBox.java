@@ -12,7 +12,7 @@ import java.util.*;
 public class MathBox extends ObjectBox {
     public static void main(String [] args) {
         /** объявление размера массива */
-        try {
+//        try {
         int z;
         System.out.print("Введите размер массива ");
         Scanner scan = new Scanner(System.in);
@@ -38,18 +38,19 @@ public class MathBox extends ObjectBox {
         new MathBox(numbers).summator();
         new MathBox(numbers).splitter();
         new MathBox(numbers).eraser();
-        /** не уверен нужно ли оно тут, но запуск родительских методов в наследнике */
-        new MathBox(numbers).addObject();
-        new MathBox(numbers).deleteObject();} catch (Exception e) {
-            System.out.println(e + " вводить необходимо целочисленные значения");
-        }
+//        /** не уверен нужно ли оно тут, но запуск родительских методов в наследнике */
+////        new MathBox(numbers).addObject();
+////        new MathBox(numbers).deleteObject();} catch (Exception e) {
+//            System.out.println(e + " вводить необходимо целочисленные значения");
+//        }
 
 
     }
     private final Integer[] numbers;
 
     public MathBox(ArrayList<Integer> numbers) {
-            this.numbers = numbers.toArray(new Integer[0]);
+        super(objects);
+        this.numbers = numbers.toArray(new Integer[0]);
     }
 
     /** Summator складывает все элементы массива */
