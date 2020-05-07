@@ -8,17 +8,15 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class ObjectBox<T> {
 
-
-    private Object newobj;
+   protected ArrayList<T> objects = new ArrayList<>();
 
     public static void main(String[] args) {
         /** создание пустой коллекции */
-        ArrayList<Object> objects = new ArrayList<>(Collections.emptyList());
+
         /** выполнение методов */
         System.out.print("Новый объект ");
         Scanner scan = new Scanner(System.in);
@@ -26,13 +24,12 @@ public class ObjectBox<T> {
         System.out.print("Проверить объект ");
         Scanner scann = new Scanner(System.in);
         String controlobj = scann.nextLine();
-        ObjectBox a = new ObjectBox();
-
+        ObjectBox<String> a = new ObjectBox<>();
 
         a.addObject(newobj);
-        System.out.println(objects);
+        System.out.println(a);
         a.deleteObject(controlobj);
-        System.out.println(objects);
+        System.out.println(a);
 
     }
 
@@ -42,8 +39,8 @@ public class ObjectBox<T> {
      * @param newobj
      */
 
-    public void addObject(T String newobj) {
-            objects.add();
+    public void addObject(T newobj) {
+            objects.add(newobj);
 //            System.out.print("Новый объект ");
 //            Scanner scan = new Scanner(System.in);
 //            String x = scan.nextLine();
@@ -59,6 +56,10 @@ public class ObjectBox<T> {
 //            String y = scan.nextLine();
     }
 
-
-
+    @Override
+    public String toString() {
+        return "ObjectBox{" +
+                "objects=" + objects +
+                '}';
+    }
 }
