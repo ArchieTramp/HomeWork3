@@ -12,10 +12,10 @@ import java.util.Scanner;
 
 public class ObjectBox<T> {
 
-   protected ArrayList<T> objects = new ArrayList<>();
+   public ArrayList<T> objects = new ArrayList<>();
 
     public static void main(String[] args) {
-        /** создание пустой коллекции */
+
 
         /** выполнение методов */
         System.out.print("Новый объект ");
@@ -36,14 +36,11 @@ public class ObjectBox<T> {
 
     /**
      * addObject добавляет элемент в коллекцию
-     * @param newobj
      */
 
     public void addObject(T newobj) {
             objects.add(newobj);
-//            System.out.print("Новый объект ");
-//            Scanner scan = new Scanner(System.in);
-//            String x = scan.nextLine();
+
     }
 
     /**
@@ -51,9 +48,7 @@ public class ObjectBox<T> {
      */
     public void deleteObject(T controlobj) {
         objects.remove(controlobj);
-//            System.out.print("Проверить объект ");
-//            Scanner scan = new Scanner(System.in);
-//            String y = scan.nextLine();
+
     }
 
     @Override
