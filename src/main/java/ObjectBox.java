@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class ObjectBox<T> {
 
-   public ArrayList<T> objects = new ArrayList<>();
+   protected ArrayList<T> objects = new ArrayList<>();
 
     public static void main(String[] args) {
 
