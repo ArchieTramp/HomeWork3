@@ -10,7 +10,7 @@
 import java.util.*;
 
 public class MathBox<T extends Number> extends ObjectBox<T> {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         /** объявление размера массива */
 
         MathBox<Integer> q = new MathBox<>();
@@ -19,12 +19,12 @@ public class MathBox<T extends Number> extends ObjectBox<T> {
         System.out.print("Введите размер массива ");
         Scanner scan = new Scanner(System.in);
         int capacity = scan.nextInt();
-            for (z = 0; z < capacity; z++) {
-                System.out.print("Введите значение для элемента " + z + " - ");
-                Scanner scanner = new Scanner(System.in);
-                int element = scanner.nextInt();
-                q.addObject(element);
-            }
+        for (z = 0; z < capacity; z++) {
+            System.out.print("Введите значение для элемента " + z + " - ");
+            Scanner scanner = new Scanner(System.in);
+            int element = scanner.nextInt();
+            q.addObject(element);
+        }
 
         /** запуск методов */
         System.out.println("Сумма всех элементов массива = " + q.summator());
@@ -37,7 +37,9 @@ public class MathBox<T extends Number> extends ObjectBox<T> {
 
     }
 
-    /** Summator складывает все элементы массива */
+    /**
+     * Summator складывает все элементы массива
+     */
     public double summator() {
         int i;
         double sum = 0;
@@ -47,14 +49,18 @@ public class MathBox<T extends Number> extends ObjectBox<T> {
         return sum;
 
     }
-    /** Splitter делит каждый элемент массива на аргумент 2, заменяя значения и выводя на экран */
+
+    /**
+     * Splitter делит каждый элемент массива на аргумент 2, заменяя значения и выводя на экран
+     */
     public int splitter() {
         int j;
         double r;
         Double[] split = new Double[objects.size()];
         for (j = 0; j < objects.size(); j++) {
-            r =  objects.get(j).doubleValue();
-            split[j] = Double.valueOf(r/2); }
+            r = objects.get(j).doubleValue();
+            split[j] = Double.valueOf(r / 2);
+        }
 
         System.out.println("Поделим каждый элемент массива на 2 и получим " + Arrays.toString(split));
         return 0;

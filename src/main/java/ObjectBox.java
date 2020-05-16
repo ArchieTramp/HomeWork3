@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class ObjectBox<T> {
 
-   protected ArrayList<T> objects = new ArrayList<>();
+    protected ArrayList<T> objects = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -39,7 +39,7 @@ public class ObjectBox<T> {
      */
 
     public void addObject(T newobj) {
-            objects.add(newobj);
+        objects.add(newobj);
 
     }
 
